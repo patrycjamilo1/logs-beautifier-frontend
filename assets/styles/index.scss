@@ -1,0 +1,6 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    @apply bg-gray dark:bg-dark-gray text-black dark:text-white;
+}
