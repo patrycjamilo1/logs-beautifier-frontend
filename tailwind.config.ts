@@ -1,5 +1,4 @@
 export default {
-    darkMode: 'media',
     content: [
         `components/**/*.{vue,js,ts}`,
         `layouts/**/*.vue`,
@@ -17,11 +16,10 @@ export default {
                 '400': '#f54363',
                 '500': '#d81f41'
             },
-            'dark-gray': '#131313'
         },
         fontFamily: {
-            sans: ['Roboto', 'sans-serif'],
-            serif: ['Roboto', 'serif']
+            sans: ['Montserrat', 'sans-serif'],
+            serif: ['Montserrat', 'serif']
         }
     }
 }
