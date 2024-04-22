@@ -18,6 +18,10 @@ export default {
                 '500': '#d81f41'
             },
             'dark-gray': '#131313'
+        },
+        fontFamily: {
+            sans: ['Roboto', 'sans-serif'],
+            serif: ['Roboto', 'serif']
         }
     }
 }
