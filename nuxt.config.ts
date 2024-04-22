@@ -2,5 +2,10 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss'],
-  css: ['~/assets/styles/index.scss']
+  css: ['~/assets/styles/index.scss'],
+  hooks: {
+    'pages:extend': (page) => {
+      console.log(page)
+    }
+  }
 })
