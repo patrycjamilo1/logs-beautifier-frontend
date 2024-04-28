@@ -5,7 +5,7 @@ export default {
         `pages/**/*.vue`,
         `composables/**/*.{js,ts}`,
         `plugins/**/*.{js,ts}`,
-        `app.{js,ts,vue}`,
+        `app.{js,ts,vue}`
     ],
     theme: {
         colors: {

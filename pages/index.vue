@@ -1,16 +1,17 @@
-<script setup>
-import Logo from '~/assets/img/logo.png'
-import Mikrotik from '~/assets/img/devices/mikrotik.png'
+<script setup lang="ts">
+definePageMeta({
+    layout: 'homepage'
+})
 </script>
 
 <template>
     <div class="homepage">
-        <img :src="Logo" alt="Logs Beautifier" />
+        <img src="~/assets/img/logo.png" alt="Logs Beautifier" />
         <div class="content-frame">
             <h1 class="text-2xl text-center font-bold uppercase mb-8">Choose your device</h1>
             <div class="devices-to-pick-from">
                 <NuxtLink :to="{ name: 'logs-type', params: { type: 'mikrotik'} }" class="device">
-                    <img :src="Mikrotik" alt="Mikrotik" />
+                    <img src="~/assets/img/devices/mikrotik.png" alt="Mikrotik" />
                     <span class="device-name">Mikrotik</span>
                 </NuxtLink>
             </div>

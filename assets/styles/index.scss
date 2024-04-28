@@ -7,3 +7,14 @@ body {
     @apply bg-white text-black;
     font-size: 16px;
 }
+
+.filter-input {
+    @apply flex flex-col gap-1;
+    label {
+        @apply font-bold;
+    }
+}
+
+input[type="text"] {
+    @apply px-2 py-2 border border-primary-400 rounded-md text-black bg-white;
+}
