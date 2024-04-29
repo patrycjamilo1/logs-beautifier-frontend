@@ -41,7 +41,7 @@ function filter (e: Event) {
                     <button type="submit" class="bg-primary-500 text-white rounded-sm px-3 py-2 font-bold tracking-wider">
                         Filter
                     </button>
-                    <button type="submit" class="bg-black text-white rounded-sm px-3 py-2 font-bold tracking-wider">
+                    <button type="button" class="bg-black text-white rounded-sm px-3 py-2 font-bold tracking-wider" @click="emits('changed', {})">
                         Reset
                     </button>
                 </div>
