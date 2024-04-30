@@ -4,7 +4,7 @@ import type { LogsModel, Pagination } from '~/types/general';
 const route = useRoute();
 const appStore = useAppStore();
 const page = Number(route.query.page) || 1;
-createPager(`logs`, page, 5);
+createPager(`logs`, page, 7);
 const pager = computed(() => appStore.pagers[`logs`]);
 const logs = ref<LogsModel[]>([]);
 const filterObject = ref({
@@ -78,7 +78,7 @@ fetchLogs();
             </div>
         </Filters>
         <UiLoader v-if="isLoading" class="self-center" />
-        <div class="content overflow-auto max-w-[90vw]" v-if="logs.length">
+        <div class="content overflow-auto max-w-[90vw] md:max-w-[60vw] xl:max-w-full" v-if="logs.length">
             <table class="logs-table table-auto w-full">
                 <thead>
                     <tr>
