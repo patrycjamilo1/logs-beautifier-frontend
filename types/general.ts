@@ -1,8 +1,7 @@
 export interface Pagination<T> {
-    skip: number;
     page: number;
     limit: number;
-    total: number;
+    totalRows: number;
     totalPages: number;
     data: T;
 }

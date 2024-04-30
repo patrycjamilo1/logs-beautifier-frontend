@@ -20,7 +20,7 @@ export function updatePager(identifier: string | number, data: Omit<Pagination<u
     store.setPager(identifier, {
         ...store.pagers[identifier],
         totalPage: data.totalPages,
-        totalRows: data.total,
+        totalRows: data.totalRows,
         currentPage: data.page,
         perPage: data.limit,
     });
