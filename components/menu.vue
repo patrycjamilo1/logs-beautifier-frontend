@@ -18,10 +18,7 @@ nav {
     @apply bg-primary-500 flex flex-col items-center;
     min-width: 250px;
     padding: 1rem;
-    top: 0;
-    left: 0;
     min-height: 100vh;
-    height: 100%;
     transition: transform 0.3s ease-in-out;
     a {
         align-self: center;

@@ -8,21 +8,21 @@ export function createPager(identifier: string | number, currentPage: number | s
 
     const fragments = { currentPage: Number(currentPage), perPage };
 
-    store.setPager(identifier, { ...fragments, totalPage: 0, totalItem: 0 });
+    store.setPager(identifier, { ...fragments, totalPage: 0, totalRows: 0 });
 
     return fragments;
 }
 
-export function updatePager(identifier: string | number, data: Pagination<unknown>)
+export function updatePager(identifier: string | number, data: Omit<Pagination<unknown>, 'data'>)
 {
     const store = useAppStore();
 
     store.setPager(identifier, {
         ...store.pagers[identifier],
-        totalPage: data.total,
-        currentPage: data.current_page,
-        perPage: data.per_page,
-        totalItem: data.per_page * data.total,
+        totalPage: data.totalPages,
+        totalRows: data.total,
+        currentPage: data.page,
+        perPage: data.limit,
     });
 }
 
@@ -31,5 +31,5 @@ export interface PagerInfo
     currentPage: number;
     perPage: number | null;
     totalPage: number;
-    totalItem: number;
+    totalRows: number;
 }

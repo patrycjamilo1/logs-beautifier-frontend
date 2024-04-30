@@ -15,6 +15,6 @@ body {
     }
 }
 
-input[type="text"] {
+input[type="text"], input[type="date"] {
     @apply px-2 py-2 border border-primary-400 rounded-md text-black bg-white;
 }
