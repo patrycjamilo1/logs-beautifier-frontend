@@ -3,6 +3,7 @@ import type { LogsModel, Pagination } from '~/types/general';
 
 const route = useRoute();
 const appStore = useAppStore();
+const { public: { apiUrl } } = useRuntimeConfig();
 const page = Number(route.query.page) || 1;
 createPager(`logs`, page, 7);
 const pager = computed(() => appStore.pagers[`logs`]);
@@ -27,7 +28,7 @@ async function fetchLogs(filters?: Record<string, unknown>) {
     try {
         const response = await $fetch<Pagination<{logs: LogsModel[]}>>('logs', {
             method: 'GET',
-            baseURL: 'http://localhost:8000',
+            baseURL: apiUrl,
             query: { ...filters, page: pager.value?.currentPage, limit: pager.value?.perPage }
         })
         if (response) {

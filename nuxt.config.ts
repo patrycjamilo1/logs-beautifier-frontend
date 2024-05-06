@@ -7,4 +7,9 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
     layoutTransition: { name: 'layout', mode: 'out-in' }
   },
+  runtimeConfig: {
+    public: {
+      apiUrl: 'http://localhost:8000',
+    }
+  }
 })
